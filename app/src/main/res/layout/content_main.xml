@@ -10,7 +10,6 @@
     tools:showIn="@layout/app_bar_main">
 
     <TextView
-
         android:id="@+id/weight_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,6 +22,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@android:color/background_dark"/>
 
+    <TextView
+        android:id="@+id/tara_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weight_display"
+        android:background="@android:color/darker_gray"
+
+        />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -31,7 +43,7 @@
         android:paddingBottom="6.0dp"
         android:paddingLeft="10.0dp"
         android:paddingRight="12.0dp"
-        android:paddingTop="50.0dp" >
+        android:paddingTop="55.0dp" >
 
     <TextView
         android:id="@+id/connection"
@@ -52,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="Id of device ..."
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         />
 </LinearLayout>
 </android.support.constraint.ConstraintLayout>

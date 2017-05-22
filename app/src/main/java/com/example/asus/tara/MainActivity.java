@@ -15,13 +15,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private String weightDisplay;
+    private String taraDisplay;
     private int weight = 0;
+    private int weight_two = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView display = (TextView) findViewById(R.id.weight_display);
         display.setText(weightDisplay);
 
+        String taraDisplay = ("Tara: " + weight_two + " kg");
+        TextView display_two = (TextView) findViewById(R.id.tara_display);
+        display_two.setText(taraDisplay);
 
         FloatingActionButton taraButton = (FloatingActionButton) findViewById(R.id.tara);
         taraButton.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.bluetooth) {
 
-        } else if (id == R.id.download) {
+        } else if (id == R.id.load) {
 
         } else if (id == R.id.unload) {
 
