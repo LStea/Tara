@@ -1,8 +1,12 @@
 package com.example.asus.tara;
 
+import android.bluetooth.BluetoothAdapter;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.test.suitebuilder.TestMethod;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,6 +25,9 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static int REQUEST_BLUETOOTH = 1;
+    private BluetoothAdapter thisAdapter;
+
     private String weightDisplay;
     private String taraDisplay;
     private int weight = 0;
@@ -32,6 +39,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        thisAdapter = BluetoothAdapter.getDefaultAdapter();
+
+        if (thisAdapter == null) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Not compatible")
+                    .setMessage("Your phone does not support Bluetooth")
+                    .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            System.exit(0);
+                        }
+                    })
+                    .setIcon(R.drawable.ic_bluetooth_disabled_black_24dp)
+                    .show();
+        } else {
+            if (!thisAdapter.isEnabled()) {
+                Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBluetooth, REQUEST_BLUETOOTH);
+            }
+        }
 
         String weightDisplay = (weight + " kg");
         TextView display = (TextView) findViewById(R.id.weight_display);

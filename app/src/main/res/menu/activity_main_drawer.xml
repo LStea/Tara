@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Search Device">
+    <item android:title="Wyszukaj urządzenie">
         <group android:checkableBehavior="single">
             <menu>
             <item
@@ -11,37 +11,42 @@
             </menu>
         </group>
     </item>
-    <item android:title="Choose Routine">
+    <item android:title="Wybierz tryb">
         <group android:checkableBehavior="single">
         <menu>
             <item
                 android:id="@+id/load"
                 android:icon="@drawable/ic_get_app_black_24dp"
-                android:title="Load" />
+                android:title="Załadunek" />
             <item
                 android:id="@+id/unload"
                 android:icon="@drawable/ic_zoom_out_map_black_24dp"
-                android:title="Unload" />
+                android:title="Rozładunek" />
         </menu>
         </group>
     </item>
-    <item android:title="Check function">
-    <group android:checkableBehavior="single">
-        <menu>
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/ic_settings_black_24dp"
-            android:title="Settings" />
-        </menu>
-    </group>
-    </item>
-    <item android:title="Get information">
+
+    <item android:title="Informacje">
         <group android:checkableBehavior="single">
             <menu>
                 <item
+                    android:id="@+id/Receptury"
+                    android:icon="@drawable/ic_format_list_numbered_black_24dp"
+                    android:title="Receptury" />
+                <item
                     android:id="@+id/statistics"
                     android:icon="@drawable/ic_format_list_numbered_black_24dp"
-                    android:title="Statistics" />
+                    android:title="Statystyki" />
+            </menu>
+        </group>
+    </item>
+    <item android:title="Ustawienia">
+        <group android:checkableBehavior="single">
+            <menu>
+                <item
+                    android:id="@+id/settings"
+                    android:icon="@drawable/ic_settings_black_24dp"
+                    android:title="Konfiguracja" />
             </menu>
         </group>
     </item>

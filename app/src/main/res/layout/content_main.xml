@@ -49,21 +49,21 @@
         android:id="@+id/connection"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="Connection: ..."
+        android:text="Połączenie"
         />
 
     <TextView
         android:id="@+id/device_name"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="Name of device ..."
+        android:text="Nazwa urządzenia: "
         />
 
     <TextView
         android:id="@+id/id_number"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="Id of device ..."
+        android:text="ID: "
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         />
 </LinearLayout>

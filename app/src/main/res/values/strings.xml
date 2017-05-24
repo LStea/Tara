@@ -8,4 +8,8 @@
     <string name="kg">[kg]</string>
     <string name="tara">tara</string>
     <string name="hold">hold</string>
+    <string name="title_activity_my_bluetooth">MyBluetooth</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
