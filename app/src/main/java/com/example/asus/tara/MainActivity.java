@@ -21,6 +21,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.asus.tara.bluetooth.MyBluetooth;
+
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -135,7 +137,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.bluetooth) {
-
+            Intent bluetoothIntent = new Intent(MainActivity.this, MyBluetooth.class);
+            startActivity(bluetoothIntent);
         } else if (id == R.id.load) {
 
         } else if (id == R.id.unload) {
@@ -145,4 +148,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
             return true;
         }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        
     }
+}
