@@ -12,4 +12,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="list_of_devices">list_of_devices</string>
+    <string name="list_of_paired_devices">list_of_paired_devices</string>
 </resources>

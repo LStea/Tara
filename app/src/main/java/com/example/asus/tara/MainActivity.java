@@ -27,6 +27,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final int REQUEST_ENABLE_BT = 1;
     private static int REQUEST_BLUETOOTH = 1;
     private BluetoothAdapter thisAdapter;
 
@@ -144,15 +145,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.unload) {
 
         }
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        
+        if (!thisAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+
+        }
     }
 }

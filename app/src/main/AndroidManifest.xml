@@ -27,4 +27,10 @@
             android:label="@string/title_activity_my_bluetooth"></activity>
     </application>
 
+    <receiver android:name="bluetoothclient">
+        <intent-filter>
+            <action android:name="android.bluetooth.BluetoothDevice.ACTION_ACL_CONNECTED" />
+        </intent-filter>
+    </receiver>
+
 </manifest>
