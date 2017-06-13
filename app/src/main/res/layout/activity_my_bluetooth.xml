@@ -8,11 +8,12 @@
     android:orientation="vertical"
     tools:context="com.example.asus.tara.bluetooth.MyBluetooth">
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/message"
@@ -24,7 +25,28 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_home" />
 
-    </FrameLayout>
+        <Switch
+            android:id="@+id/discover_switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message"
+            android:onClick="onSwitchClicked"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discover_switch_button"/>
+
+        <FrameLayout
+            android:layout_below="@+id/progress_bar"
+            android:id="@+id/root"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
