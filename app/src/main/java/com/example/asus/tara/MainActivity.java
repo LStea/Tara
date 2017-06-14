@@ -13,7 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.asus.tara.bluetooth.MyBluetooth;
 
@@ -42,20 +44,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView display_two = (TextView) findViewById(R.id.tara_display);
         display_two.setText(taraDisplay);
 
-        FloatingActionButton taraButton = (FloatingActionButton) findViewById(R.id.tara);
+        Button taraButton = (Button) findViewById(R.id.button_left);
         taraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Toast.makeText(MainActivity.this, "Left", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Left button clicked", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
-        FloatingActionButton holdButton = (FloatingActionButton) findViewById(R.id.hold);
+        Button holdButton = (Button) findViewById(R.id.button_right);
         holdButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Right button clicked", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

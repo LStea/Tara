@@ -13,60 +13,49 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
-    <FrameLayout
-        android:id="@+id/tara_frame"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="bottom">
+
+    <FrameLayout
+        android:id="@+id/button_left_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_weight="1"
         >
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/tara"
-            android:layout_width="100dp"
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="190dp"
             android:layout_height="100dp"
-            android:layout_gravity="bottom"
-            android:layout_margin="@dimen/fab_margin"
+            android:layout_gravity="bottom|start"
+            android:hint="@string/left_button"
             app:backgroundTint="@color/colorTara" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:elevation="16dp"
-            android:text="@string/tara"
-            android:textSize="30sp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/white" />
-
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/hold_frame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right">
+        <FrameLayout
+            android:id="@+id/button_right_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            >
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/hold"
-            android:layout_width="100dp"
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="190dp"
             android:layout_height="100dp"
             android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
+            android:hint="@string/right_button"
             app:backgroundTint="@color/colorHold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:elevation="16dp"
-            android:textSize="30sp"
-            android:text="@string/hold"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/white" />
-
     </FrameLayout>
+
+    </LinearLayout>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -74,5 +63,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <include layout="@layout/content_main" />
 
 </android.support.design.widget.CoordinatorLayout>
