@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,21 +35,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        int weight = 0;
+        int weight = -3589;
         String weightDisplay = (weight + " kg");
         TextView display = (TextView) findViewById(R.id.weight_display);
+        display.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         display.setText(weightDisplay);
 
-        int weight_two = 0;
+        int weight_two = 3589;
         String taraDisplay = ("Tara: " + weight_two + " kg");
         TextView display_two = (TextView) findViewById(R.id.tara_display);
+        display_two.setGravity(Gravity.CENTER);
         display_two.setText(taraDisplay);
 
         Button taraButton = (Button) findViewById(R.id.button_left);
         taraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Left", Toast.LENGTH_SHORT).show();
+
                 Snackbar.make(view, "Left button clicked", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         holdButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
+
                 Snackbar.make(view, "Right button clicked", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
