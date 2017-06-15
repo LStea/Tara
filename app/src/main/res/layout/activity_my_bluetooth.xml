@@ -30,15 +30,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/message"
-            android:onClick="onSwitchClicked"
-            />
+            android:onClick="onSwitchClicked" />
 
         <FrameLayout
-            android:layout_below="@+id/discover_switch_button"
             android:id="@+id/root"
-            android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discover_switch_button"
+            android:scrollbars="vertical" />
 
     </RelativeLayout>
 

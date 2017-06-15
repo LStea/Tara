@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         int weight = -3589;
         String weightDisplay = (weight + " kg");
-        TextView display = (TextView) findViewById(R.id.weight_display);
-        display.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        Button display = (Button) findViewById(R.id.weight_display);
+        display.setGravity(Gravity.CENTER);
         display.setText(weightDisplay);
 
         int weight_two = 3589;

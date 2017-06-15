@@ -27,6 +27,7 @@
         android:layout_height="100dp"
         android:layout_gravity="start"
         android:layout_weight="1"
+        android:background="@drawable/border"
         >
 
         <Button
@@ -35,7 +36,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:hint="@string/left_button"
-            app:backgroundTint="@color/colorTara" />
+            android:textStyle="bold"
+            />
 
     </FrameLayout>
 
@@ -45,6 +47,7 @@
             android:layout_height="100dp"
             android:layout_gravity="end"
             android:layout_weight="1"
+            android:background="@drawable/border"
             >
 
         <Button
@@ -53,7 +56,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="bottom|end"
             android:hint="@string/right_button"
-            app:backgroundTint="@color/colorHold" />
+            android:textStyle="bold"
+            />
     </FrameLayout>
 
     </LinearLayout>
