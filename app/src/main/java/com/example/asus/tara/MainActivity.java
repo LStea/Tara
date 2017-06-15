@@ -2,6 +2,7 @@ package com.example.asus.tara;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String taraDisplay = ("Tara: " + weight_two + " kg");
         TextView display_two = (TextView) findViewById(R.id.tara_display);
         display_two.setGravity(Gravity.CENTER);
+        display_two.setTextColor(Color.parseColor("#FF4081"));
         display_two.setText(taraDisplay);
 
         Button taraButton = (Button) findViewById(R.id.button_left);

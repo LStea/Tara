@@ -15,50 +15,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_gravity="bottom"
         >
 
-    <FrameLayout
-        android:id="@+id/button_left_layout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_gravity="start"
-        android:layout_weight="1"
-        android:background="@drawable/border"
-        >
-
         <Button
             android:id="@+id/button_left"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:hint="@string/left_button"
-            android:textStyle="bold"
-            />
-
-    </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/button_right_layout"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_gravity="end"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:background="@drawable/border"
-            >
-
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="tara"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="Century Gothic"
+            android:textSize="40dp"
+            />
         <Button
             android:id="@+id/button_right"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom|end"
-            android:hint="@string/right_button"
-            android:textStyle="bold"
+            android:layout_height="80dp"
+            android:text="hold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="Century Gothic"
+            android:textSize="40dp"
             />
-    </FrameLayout>
 
     </LinearLayout>
 
