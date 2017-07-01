@@ -19,12 +19,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.asus.tara.bluetooth.MyBluetooth;
-import com.example.asus.tara.paired_devices.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.charset.Charset;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -113,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void gettingMessage() {
             inStream = bto.inStream;
-            Runnable runnable = new SendThread(inStream,
+            Runnable runnable = new GetMessageThread(inStream,
                     bto.btSocket, activity, display);
             thread = new Thread(runnable);
             thread.start();

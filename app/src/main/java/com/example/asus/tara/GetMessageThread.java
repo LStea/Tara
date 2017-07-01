@@ -12,14 +12,14 @@ import java.io.InputStream;
  * Created by asus on 27.06.2017.
  */
 
-public class SendThread implements Runnable {
+public class GetMessageThread implements Runnable {
     InputStream inStream;
     BluetoothSocket btSocket;
     Activity activity;
     Button display;
     private String msg;
 
-    SendThread(InputStream inputStream, BluetoothSocket bluetoothSocket, Activity cont, Button btn){
+    GetMessageThread(InputStream inputStream, BluetoothSocket bluetoothSocket, Activity cont, Button btn){
         inStream = inputStream;
         btSocket = bluetoothSocket;
         activity = cont;
