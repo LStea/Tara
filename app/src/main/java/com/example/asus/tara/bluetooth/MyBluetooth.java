@@ -115,8 +115,8 @@ public class MyBluetooth extends AppCompatActivity {
                 String deviceName = device.getName();
                 String deviceHardwareAddress = device.getAddress(); // MAC address
 
-                Toast.makeText(MyBluetooth.this, deviceName, Toast.LENGTH_SHORT).show();
-                Toast.makeText(MyBluetooth.this, deviceHardwareAddress, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MyBluetooth.this, deviceName, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MyBluetooth.this, deviceHardwareAddress, Toast.LENGTH_SHORT).show();
             }
         }
     }

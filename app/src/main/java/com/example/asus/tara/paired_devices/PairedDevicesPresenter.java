@@ -15,6 +15,7 @@ import java.util.Set;
 public class PairedDevicesPresenter {
     private BluetoothHelper bluetoothHelper;
     private PairedDevices view;
+    private List<BluetoothDevice> devicesList = new ArrayList();
     public void bind(PairedDevices view) {
         this.view = view;
         Set<BluetoothDevice> devices = bluetoothHelper.getPairedDevices();
@@ -25,6 +26,7 @@ public class PairedDevicesPresenter {
             model.setName(device.getName());
             model.setMac(device.getAddress());
             items.add(model);
+            devicesList.add(device);
         }
 
         view.setData(items);
@@ -34,6 +36,9 @@ public class PairedDevicesPresenter {
     }
     public void release() {
 
+    }
+    public List<BluetoothDevice> getDeviceList() {
+        return this.devicesList;
     }
 
     public PairedDevicesPresenter(BluetoothHelper bluetoothHelper) {
